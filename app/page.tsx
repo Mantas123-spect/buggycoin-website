@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { FaTwitter, FaTelegramPlane, FaDiscord } from "react-icons/fa";
 
 export default function Home() {
-  // Animated slogan logic
   const slogans = ["Buy BuggyCoin", "Hold and Meme", "Moon Together 🚀"];
   const [currentSlogan, setCurrentSlogan] = useState(0);
 
@@ -22,6 +21,16 @@ export default function Home() {
       <div className="w-full bg-yellow-400 text-black text-center py-2 font-bold">
         Join the Buggy Army today 🚀
       </div>
+
+      {/* Join Community button */}
+      <a
+        href="https://t.me/BuggyCoinCommunity"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed top-4 right-4 bg-yellow-400 text-black font-bold py-2 px-4 rounded-lg shadow-lg hover:bg-yellow-500 transition z-50"
+      >
+        Join Community
+      </a>
 
       {/* Main container */}
       <div className="flex flex-col items-center justify-center p-4">
@@ -146,7 +155,7 @@ export default function Home() {
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition">
               <FaTwitter />
             </a>
-            <a href="https://t.me" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition">
+            <a href="https://t.me/BuggyCoinOfficial" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition">
               <FaTelegramPlane />
             </a>
             <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition">
@@ -178,7 +187,7 @@ export default function Home() {
           </div>
         </motion.div>
 
-        {/* Join Community */}
+        {/* Join Community form */}
         <motion.div
           className="mt-12 w-full max-w-md text-center bg-yellow-400 text-black rounded-xl p-6 shadow-lg"
           initial={{ opacity: 0, y: 20 }}
